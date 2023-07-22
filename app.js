@@ -1,8 +1,16 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-
 const app = express();
 
+const routes = require("./routes/index.routes");
+
+// Parse JSON bodies
+app.use(express.json());
+
+// Mount routes
+app.use("/", routes);
+
+// Start the server
 const start = () => {
     try {
         const PORT = process.env.PORT || 3030;
@@ -14,4 +22,3 @@ const start = () => {
     }
 }
 start();
-// 22:25
