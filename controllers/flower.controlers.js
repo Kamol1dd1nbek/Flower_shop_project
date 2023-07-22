@@ -1,4 +1,3 @@
-const { error } = require("console");
 const db = require("../config/db");
 
 // Get all flowers
