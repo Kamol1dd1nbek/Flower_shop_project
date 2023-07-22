@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const app = express();
 
+// Routes
 const routes = require("./routes/index.routes");
 
 // Parse JSON bodies
